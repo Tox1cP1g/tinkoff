@@ -17,3 +17,6 @@ with open('accounts-design.json') as file:
 for i in range(0, 321):
   features = cards[i]['card_name'] # ['5G', 'HD display', 'Dual camera']
   print(features)
+
+
+
