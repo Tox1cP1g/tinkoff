@@ -6,7 +6,7 @@ import pathlib
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
-bot = Bot(token='6695978783:AAEQN7GtWRFQRznz7yVF26SOrXAMGGaD0o4')
+bot = Bot(token='6587233825:AAFsESMlIrDFP_hRU4z8LidH3S60k6XmQY4')
 dp = Dispatcher(bot)
 base_dir = pathlib.Path(__file__).absolute().parent
 
@@ -40,7 +40,7 @@ async def get_info(message: types.Message):
         # response = requests.get('/Users/kobelev/tinkoff_cards/accounts-design.json')
         with open('accounts-design.json') as file:
             cards = json.load(file)
-        for i in range(0, 321):
+        for i in range(0, 323):
             name = cards[i]['card_name']  # card name
             hash = cards[i]['card_hash_ID']  # hash of card
             loyality = cards[i]["premial_card"] # premium card or not
