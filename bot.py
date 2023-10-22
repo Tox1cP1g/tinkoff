@@ -6,7 +6,9 @@ import pathlib
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
-bot = Bot(token='6587233825:AAFsESMlIrDFP_hRU4z8LidH3S60k6XmQY4')
+import config
+# from config.py import TOKEN
+bot = Bot(token=config.TOKEN)
 dp = Dispatcher(bot)
 base_dir = pathlib.Path(__file__).absolute().parent
 
