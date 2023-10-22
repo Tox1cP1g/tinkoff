@@ -44,14 +44,14 @@ def comeback_hash_red (hash):
 async def cmd_start(message: types.Message):
 
     write_user_to_file(message.from_user.id)
-    keyboard_markup = types.ReplyKeyboardMarkup(row_width=3)
+    keyboard_markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = types.KeyboardButton('Поиск по названию')
     button2 = types.KeyboardButton('Поиск по хэшу')
     keyboard_markup.add(button1)
     keyboard_markup.add(button2)
     # await message.answer('Нажми на кнопку', reply_markup=keyboard_markup)
     # await dp.current_state(user=message.from_user.id).set_state(USER_INPUT)  # устанавливаем состояние
-    await message.reply("Привет, {0.first_name}! <b>Следуй кнопкам для поиска необходимой информации.</b>".format(message.from_user), parse_mode="HTML")
+    await message.reply("Привет, {0.first_name}! <b>Следуй кнопкам для поиска необходимой информации.</b>".format(message.from_user), reply_markup= keyboard_markup, parse_mode="HTML")
 
 
 @dp.message_handler(Text(equals='Поиск по названию'))
